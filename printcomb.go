@@ -3,7 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintComb() {
-	for n1 := 48; n1 <= 55; n1++ {
+	for n1 := 48; n1 <= 54; n1++ {
 		for n2 := 49; n2 <= 56; n2++ {
 			if n1 >= n2 {
 				n2 = n1 + 1
@@ -20,4 +20,8 @@ func PrintComb() {
 			}
 		}
 	}
+	z01.PrintRune((rune(55)))
+	z01.PrintRune((rune(56)))
+	z01.PrintRune((rune(57)))
+	z01.PrintRune('\n')
 }
