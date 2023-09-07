@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	s := "Hello 78 World!    4455 /"
-	nb := piscine.AlphaCount(s)
-	fmt.Println(nb)
+	fmt.Println(piscine.IsPrintable("Hello"))
+	fmt.Println(piscine.IsPrintable("Hello\n"))
+
 }
