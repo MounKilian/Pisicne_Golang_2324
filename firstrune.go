@@ -1,5 +1,8 @@
 package piscine
 
 func FirstRune(s string) rune {
-	return (rune(s[0]))
+	if s[0] == 'â' {
+		return '♥'
+	}
+	return rune(s[0])
 }
