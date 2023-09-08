@@ -6,6 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.IsPrintable("1MTRY0A#|89ji"))
-	fmt.Println(piscine.IsPrintable("Hello\n"))
+	fmt.Println(piscine.ToLower("Hello! How are you?"))
 }
