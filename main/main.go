@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Concat("Hello!", " How are you?"))
+	elems := []string{"Hello!", " How", " are", " you?"}
+	fmt.Println(piscine.BasicJoin(elems))
 }
