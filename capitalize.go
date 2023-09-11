@@ -3,7 +3,11 @@ package piscine
 func Capitalize(s string) string {
 	var result string
 	tab := []rune(s)
-	result = result + string(tab[0])
+	if tab[0] >= 'A' && tab[0] <= 'Z' {
+		result = result + string(tab[0])
+	} else {
+		result = result + string(tab[0]-32)
+	}
 	for i := 1; i <= len(tab)-1; i++ {
 		if tab[i] >= 'a' && tab[i] <= 'z' {
 			if (tab[i-1] >= 'A' && tab[i-1] <= 'Z') || (tab[i-1] >= 'a' && tab[i-1] <= 'z') || (tab[i-1] >= 48 && tab[i-1] <= 57) {
