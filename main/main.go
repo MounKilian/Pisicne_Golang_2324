@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Capitalize(";Eu&l`k)#NXPn"))
+	fmt.Println(piscine.Capitalize("6AwW,dD ^JAoU"))
 }

@@ -16,7 +16,7 @@ func Capitalize(s string) string {
 				result = result + string(rune(tab[i]-32))
 			}
 		} else if tab[i] >= 'A' && tab[i] <= 'Z' {
-			if (tab[i-1] >= 'a' && tab[i-1] <= 'z') || (tab[i-1] >= 'A' && tab[i-1] <= 'Z') {
+			if (tab[i-1] >= 'a' && tab[i-1] <= 'z') || (tab[i-1] >= 'A' && tab[i-1] <= 'Z') || (tab[i-1] >= 48 && tab[i-1] <= 57) {
 				result = result + string(tab[i]+32)
 			} else {
 				result = result + string(tab[i])
