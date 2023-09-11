@@ -12,11 +12,11 @@ func Capitalize(s string) string {
 		if tab[i] >= 'a' && tab[i] <= 'z' {
 			if (tab[i-1] >= 'A' && tab[i-1] <= 'Z') || (tab[i-1] >= 'a' && tab[i-1] <= 'z') || (tab[i-1] >= 48 && tab[i-1] <= 57) {
 				result = result + string(tab[i])
-			} else if tab[i-1] == ' ' || (tab[i-1] >= 33 && tab[i-1] <= 46) || (tab[i-1] >= 58 && tab[i-1] <= 64) || (tab[i-1] >= 91 && tab[i-1] <= 96) || (tab[i-1] >= 123 && tab[i-1] <= 126) {
+			} else {
 				result = result + string(rune(tab[i]-32))
 			}
 		} else if tab[i] >= 'A' && tab[i] <= 'Z' {
-			if tab[i-1] >= 'a' && tab[i-1] <= 'z' {
+			if (tab[i-1] >= 'a' && tab[i-1] <= 'z') || (tab[i-1] >= 'A' && tab[i-1] <= 'Z') {
 				result = result + string(tab[i]+32)
 			} else {
 				result = result + string(tab[i])
