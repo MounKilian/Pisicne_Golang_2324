@@ -1,8 +1,6 @@
 package piscine
 
 import (
-	"fmt"
-
 	"github.com/01-edu/z01"
 )
 
@@ -32,7 +30,7 @@ func PrintNbrInOrder(n int) {
 			}
 		}
 		for _, k := range result {
-			fmt.Print(k)
+			z01.PrintRune(rune(k + 48))
 		}
 	}
 }
