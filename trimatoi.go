@@ -1,6 +1,9 @@
 package piscine
 
 func TrimAtoi(s string) int {
+	if len(s) == 0 {
+		return 0
+	}
 	i := 0
 	for _, j := range s {
 		if j >= '0' && j <= '9' {

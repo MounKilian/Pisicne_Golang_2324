@@ -7,7 +7,7 @@ import (
 
 func main() {
 	fmt.Println(piscine.TrimAtoi("12345"))
-	fmt.Println(piscine.TrimAtoi("str123ing45"))
+	fmt.Println(piscine.TrimAtoi("str123ing4598764"))
 	fmt.Println(piscine.TrimAtoi("012 345"))
 	fmt.Println(piscine.TrimAtoi("Hello World!"))
 	fmt.Println(piscine.TrimAtoi("sd+x1fa2W3s4"))
