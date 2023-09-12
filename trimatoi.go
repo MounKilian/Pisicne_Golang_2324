@@ -37,9 +37,9 @@ func TrimAtoi(s string) int {
 			}
 		}
 	}
-	num := i / 10
+	result := i / 10
 	if s[0] == '-' {
-		return -num
+		return -result
 	}
 	aide := 0
 	for _, j := range s {
@@ -48,9 +48,9 @@ func TrimAtoi(s string) int {
 		}
 		if j == '-' {
 			if aide == 0 {
-				num = -num
+				result = -result
 			}
 		}
 	}
-	return num
+	return result
 }
