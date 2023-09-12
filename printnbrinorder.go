@@ -20,8 +20,8 @@ func PrintNbrInOrder(n int) {
 		indice := 0
 		for i := 0; i <= len(result)-1; i++ {
 			i_mini = i
-			for j := i + 1; j <= len(result)-1; j++ {
-				if result[j] < result[i_mini] {
+			for j := 0; j <= len(result)-1; j++ {
+				if result[j] > result[i_mini] {
 					i_mini = j
 					indice = result[i]
 					result[i] = result[i_mini]
