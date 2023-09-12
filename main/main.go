@@ -1,7 +1,12 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintNbrInOrder(7168945014983862429)
+	fmt.Println(piscine.Index("Hello!", "l"))
+	fmt.Println(piscine.Index("Salut!", "alu"))
+	fmt.Println(piscine.Index("Ola!", "hOl"))
 }
