@@ -42,11 +42,11 @@ func TrimAtoi(s string) int {
 		return -result
 	}
 	aide := 0
-	for _, j := range s {
-		if j >= '0' && j <= '9' {
+	for _, k := range s {
+		if k >= '0' && k <= '9' {
 			aide++
 		}
-		if j == '-' {
+		if k == '-' {
 			if aide == 0 {
 				result = -result
 			}
