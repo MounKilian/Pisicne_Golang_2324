@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.FindNextPrime(-10000))
-	fmt.Println(piscine.FindNextPrime(1000000086))
-	fmt.Println(piscine.FindNextPrime(1000000087))
-	fmt.Println(piscine.FindNextPrime(1000000088))
+	n := 0
+	piscine.PointOne(&n)
+	fmt.Println(n)
 }
