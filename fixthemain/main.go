@@ -6,8 +6,10 @@ type Door struct {
 	state bool
 }
 
-const OPEN = false
-const CLOSE = true
+const (
+	OPEN  = false
+	CLOSE = true
+)
 
 func PrintStr(s string) {
 	for _, r := range s {
@@ -23,7 +25,6 @@ func CloseDoor(ptrDoor *Door) {
 func OpenDoor(ptdrDoor *Door) {
 	PrintStr("Door Open...")
 	ptdrDoor.state = OPEN
-
 }
 
 func IsDoorOpen(ptdrDoor *Door) bool {
