@@ -8,8 +8,8 @@ func BasicAtoi(s string) int {
 		for j := '0'; j < i; j++ {
 			num++
 		}
-		result = (result + num) * 10
+		result = result*10 + num
 		num = 0
 	}
-	return result / 10
+	return result
 }
