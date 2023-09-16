@@ -1,7 +1,5 @@
 package piscine
 
 func Concat(str1 string, str2 string) string {
-	var final string
-	final = str1 + str2
-	return final
+	return str1 + str2
 }

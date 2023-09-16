@@ -1,14 +1,14 @@
 package piscine
 
 func ToLower(s string) string {
-	var fin []rune
+	var result []rune
 	tab := []rune(s)
 	for _, i := range tab {
-		if i >= 65 && i <= 90 {
-			fin = append(fin, i+32)
+		if i >= 'A' && i <= 'Z' {
+			result = append(result, i+32)
 		} else {
-			fin = append(fin, i)
+			result = append(result, i)
 		}
 	}
-	return string(fin)
+	return string(result)
 }

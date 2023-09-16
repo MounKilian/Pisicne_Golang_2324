@@ -1,9 +1,9 @@
 package piscine
 
 func BasicJoin(elems []string) string {
-	var final string
+	var result string
 	for _, i := range elems {
-		final = final + i
+		result += i
 	}
-	return final
+	return result
 }

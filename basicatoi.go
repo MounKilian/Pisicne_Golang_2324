@@ -1,9 +1,6 @@
 package piscine
 
-func TrimAtoi(s string) int {
-	if len(s) == 0 {
-		return 0
-	}
+func BasicAtoi(s string) int {
 	var result int
 	for _, i := range s {
 		if i >= '0' && i <= '9' {
@@ -40,15 +37,5 @@ func TrimAtoi(s string) int {
 		}
 	}
 	result /= 10
-	aide := 0
-	for _, j := range s {
-		if j >= '0' && j <= '9' {
-			aide++
-		} else if j == '-' {
-			if aide == 0 {
-				result = -result
-			}
-		}
-	}
 	return result
 }
