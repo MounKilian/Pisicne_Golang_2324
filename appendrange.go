@@ -5,7 +5,7 @@ func AppendRange(min, max int) []int {
 	if max <= min || max == 0 {
 		return result
 	}
-	for i := min; i <= max; i++ {
+	for i := min; i < max; i++ {
 		result = append(result, i)
 	}
 	return result
