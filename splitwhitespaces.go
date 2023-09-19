@@ -7,8 +7,9 @@ func SplitWhiteSpaces(s string) []string {
 		if string(i) == " " {
 			if string(s[j-1]) == " " {
 				result = append(result, "")
+			} else {
+				result = append(result, aide)
 			}
-			result = append(result, aide)
 			aide = ""
 		} else {
 			aide += string(i)
