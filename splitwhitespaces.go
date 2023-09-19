@@ -15,5 +15,8 @@ func SplitWhiteSpaces(s string) []string {
 		}
 	}
 	result = append(result, aide)
+	if string(s[len(s)-1]) == " " {
+		result = append(result, "")
+	}
 	return result
 }
