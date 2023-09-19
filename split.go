@@ -12,6 +12,9 @@ func Split(s, sep string) []string {
 			aide += string(s[i])
 		}
 	}
-	result = append(result, aide+string(s[len(s)-1]))
+	for j := len(s) - len(sep) + 1; j <= len(s)-1; j++ {
+		aide += string(s[j])
+	}
+	result = append(result, aide)
 	return result
 }
