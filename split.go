@@ -8,6 +8,9 @@ func Split(s, sep string) []string {
 			result = append(result, aide)
 			aide = ""
 			i = i + len(sep) - 1
+			if i >= len(s)-2 {
+				i = len(s) - 2
+			}
 		} else {
 			aide += string(s[i])
 		}
