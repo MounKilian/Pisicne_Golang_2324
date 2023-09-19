@@ -9,7 +9,7 @@ func Split(s, sep string) []string {
 			aide = ""
 			i = i + len(sep) - 1
 			if i >= len(s)-2 {
-				i = len(s) - 2
+				i = len(s) - 3
 			}
 		} else {
 			aide += string(s[i])
