@@ -2,9 +2,12 @@ package piscine
 
 func ConcatParams(args []string) string {
 	result := ""
-	for i := 0; i <= len(args)-2; i++ {
-		result += args[i] + "\n"
+	for _, i := range args {
+		if i == args[len(args)-1] {
+			result += i
+		} else {
+			result += i + string('\n')
+		}
 	}
-	result += args[len(args)-1]
 	return result
 }
