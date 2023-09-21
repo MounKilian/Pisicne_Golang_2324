@@ -4,6 +4,9 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	result := true
 	etat := 1
 	count := 0
+	if len(a) == 0 || len(a) == 1 {
+		return true
+	}
 	if f(a[0], a[1]) < 0 {
 		etat = 0
 	}
