@@ -2,22 +2,15 @@ package piscine
 
 func SplitWhiteSpaces(s string) []string {
 	result := []string{}
-	aide := ""
+	word := ""
 	for _, i := range s {
-		if string(i) == " " {
-			if aide == "" {
-				aide = ""
-			} else {
-				result = append(result, aide)
-				aide = ""
-			}
+		if i == ' ' {
+			result = append(result, word)
+			word = ""
 		} else {
-			aide += string(i)
+			word += string(i)
 		}
 	}
-	result = append(result, aide)
-	if string(s[len(s)-1]) == " " {
-		result = append(result, "")
-	}
+	result = append(result, word)
 	return result
 }
