@@ -8,9 +8,9 @@ import (
 
 func main() {
 	arg := os.Args[1:]
-	for k := len(arg) - 1; k >= 0; k-- {
-		for _, i := range arg[k] {
-			z01.PrintRune(i)
+	for i := len(arg) - 1; i >= 0; i-- {
+		for _, j := range arg[i] {
+			z01.PrintRune(j)
 		}
 		z01.PrintRune('\n')
 	}
