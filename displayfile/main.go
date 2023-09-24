@@ -16,9 +16,7 @@ func main() {
 		fmt.Println(string(data))
 	} else if len(arg) > 1 {
 		fmt.Print("Too many arguments")
-		fmt.Print("\n")
 	} else {
 		fmt.Print("File name missing")
-		fmt.Print("\n")
 	}
 }
