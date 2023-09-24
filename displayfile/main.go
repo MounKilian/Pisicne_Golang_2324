@@ -13,6 +13,7 @@ func main() {
 			fmt.Println(err)
 		}
 		fmt.Println(string(data))
+		fmt.Print("\n")
 	} else if len(arg) > 1 {
 		fmt.Print("Too many arguments")
 		fmt.Print("\n")
