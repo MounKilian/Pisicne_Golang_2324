@@ -3,14 +3,53 @@ package main
 import (
 	"fmt"
 	"os"
-	"piscine"
 )
+
+func BasicAtoi(s string) int {
+	result := 0
+	num := 0
+	tab := []rune(s)
+	for _, i := range tab {
+		for j := '0'; j < i; j++ {
+			num++
+		}
+		result = result*10 + num
+		num = 0
+	}
+	return result
+}
+
+func Atoi(s string) int {
+	result := BasicAtoi(s)
+	aide := 0
+	for _, i := range s {
+		if i >= '0' && i <= '9' {
+			aide++
+		} else if i == '-' {
+			if aide == 0 {
+				result = -result
+				aide++
+			} else {
+				return 0
+			}
+		} else if i == '+' {
+			if aide == 0 {
+				aide++
+			} else {
+				return 0
+			}
+		} else {
+			return 0
+		}
+	}
+	return result
+}
 
 func main() {
 	if os.Args[1] == "-c" {
 		arg := os.Args[3:]
 		count := os.Args[2]
-		help := piscine.Atoi(count)
+		help := Atoi(count)
 		for m, i := range arg {
 			data, err := os.ReadFile(i)
 			if err != nil {
