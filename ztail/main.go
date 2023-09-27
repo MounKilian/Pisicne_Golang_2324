@@ -3,21 +3,28 @@ package main
 import (
 	"fmt"
 	"os"
+	"piscine"
 )
 
 func main() {
-	arg := os.Args[1:]
-	if len(arg) == 1 {
-		data, err := os.ReadFile(arg[0])
-		if err != nil {
-			fmt.Println(err)
+	if os.Args[1] == "-c" {
+		arg := os.Args[3:]
+		count := os.Args[2]
+		help := piscine.Atoi(count)
+		for m, i := range arg {
+			data, err := os.ReadFile(i)
+			if err != nil {
+				fmt.Println(err)
+			}
+			if len(data) == 0 {
+				fmt.Print("")
+			} else {
+				fmt.Println("==>", arg[m], "<==")
+				for k := len(data) - help + 1; k <= len(data)-1; k++ {
+					fmt.Print(string(data[k]))
+				}
+				fmt.Print("\n")
+			}
 		}
-		fmt.Print(string(data))
-	} else if len(arg) > 1 {
-		fmt.Print("Too many arguments")
-		fmt.Print("\n")
-	} else {
-		fmt.Print("File name missing")
-		fmt.Print("\n")
 	}
 }
