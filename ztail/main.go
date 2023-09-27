@@ -67,8 +67,9 @@ func main() {
 			} else {
 				fmt.Println("==>", arg[m], "<==")
 				for k := len(data) - help + 1; k <= len(data)-1; k++ {
-					fmt.Println(string(data[k]))
+					fmt.Print(string(data[k]))
 				}
+				fmt.Println()
 			}
 		}
 	}
