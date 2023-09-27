@@ -62,8 +62,7 @@ func main() {
 				for n := range data {
 					fmt.Print(string(data[n]))
 				}
-				os.Exit(1)
-
+				fmt.Printf(err.Error())
 			} else {
 				fmt.Println("==>", arg[m], "<==")
 				for k := len(data) - help + 1; k <= len(data)-1; k++ {
