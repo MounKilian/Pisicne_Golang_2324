@@ -56,7 +56,7 @@ func main() {
 				fmt.Println(err)
 			}
 			if len(data) == 0 {
-				fmt.Print("")
+				fmt.Println("")
 			} else if len(data) <= help {
 				fmt.Println("==>", arg[m], "<==")
 				for n := range data {
