@@ -62,7 +62,6 @@ func main() {
 				for n := range data {
 					fmt.Print(string(data[n]))
 				}
-				fmt.Print("\n")
 				fmt.Print("exit status 1")
 			} else {
 				fmt.Println("==>", arg[m], "<==")
