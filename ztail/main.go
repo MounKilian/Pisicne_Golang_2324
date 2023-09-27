@@ -64,7 +64,6 @@ func main() {
 				}
 				err := fmt.Errorf("exit status 1")
 				fmt.Println(err)
-				os.Exit(1)
 
 			} else {
 				fmt.Println("==>", arg[m], "<==")
